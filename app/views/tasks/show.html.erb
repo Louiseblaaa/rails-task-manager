@@ -1,0 +1,16 @@
+<h2><%= @task.name %></h2>
+<ul>
+  <li><%= @task.content %>
+    </br>
+    <%= @task.created_at %></li>
+  </ul>
+
+<%= link_to "Delete", task_path(@task),
+  method: :delete,
+  date: { confirm: "Are you sure ?" } %>
+
+<%= link_to "Edit", edit_task_path(@task) %>
+
+<%= link_to "Toutes les tâches", tasks_path(@task) %>
+
+
